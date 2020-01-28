@@ -2,22 +2,28 @@ FROM jupyter/scipy-notebook:7a0c7325e470
 
 USER $NB_USER
 
-RUN conda install --quiet --yes -c conda-forge jupyter_contrib_nbextensions && \
-    conda clean --all -f -y && \
-    jupyter nbextension enable spellchecker/main --user && \
+RUN conda install --quiet --yes -c conda-forge \
+    lifelines \
+    pyreadstat \
+    jupytext \
+    jupyter_contrib_nbextensions && \
+    jupyter nbextension enable autoscroll/main --user && \
+    jupyter nbextension enable toc2/main --user && \
     jupyter nbextension enable skip-traceback/main --user && \
     jupyter nbextension enable execute_time/ExecuteTime --user && \
-    jupyter nbextension enable collapsible_headings/main --user && \
-    pip install pyforest==1.0.2 
+    jupyter nbextension enable collapsible_headings/main --user
 
-USER root
+RUN pip install --user pyforest \
+    bamboolib && \
+    jupyter nbextension install --py pyforest --user && \
+    jupyter nbextension enable --py pyforest --user && \
+    jupyter nbextension enable --py qgrid --user && \
+    jupyter nbextension enable --py widgetsnbextension --user && \
+    jupyter nbextension install --py bamboolib --user && \
+    jupyter nbextension enable --py bamboolib --user
 
-RUN python -m pyforest install_extensions
+RUN fix-permissions $CONDA_DIR && \
+    fix-permissions /home/$NB_USER
 
-USER $NB_USER
-
-# The below code will make pyforest autoimport.
-# However you still need to leave the first cell of the notebook as a code cell
-# for the auto-imports.
-# best just explicitly include this with formatting magic and so on at the top.
-# RUN ipython -c "from pyforest.auto_import import setup; setup()"
+COPY user_imports.py /home/$NB_USER/.pyforest/user_imports.py
+COPY jupyter_notebook_config.py /home/$NB_USER/.jupyter/jupyter_notebook_config.py
