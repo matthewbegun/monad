@@ -25,5 +25,9 @@ RUN pip install --user pyforest \
 RUN fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
 
-COPY user_imports.py /home/$NB_USER/.pyforest/user_imports.py
-COPY jupyter_notebook_config.py /home/$NB_USER/.jupyter/jupyter_notebook_config.py
+# Make sure the contents of our repo are in ${HOME}
+COPY . ${HOME}
+USER root
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
+
