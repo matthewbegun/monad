@@ -33,7 +33,4 @@ COPY pyforest_autoimport.py /home/$NB_USER/.ipython/profile_default/startup/pyfo
 COPY bamboolib_autoimport.py /home/$NB_USER/.ipython/profile_default/startup/bamboolib_autoimport.py
 RUN chown -R ${NB_UID} ${HOME}
 
-RUN fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER
-
 USER ${NB_USER}
