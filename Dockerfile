@@ -4,7 +4,6 @@ USER root
 
 RUN conda install --quiet --yes -c conda-forge --overide-channel \
     lifelines \
-    pyreadstat \
     jupytext \
     jupyter_contrib_nbextensions && \
     jupyter nbextension enable autoscroll/main --sys-prefix && \
