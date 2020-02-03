@@ -26,9 +26,9 @@ RUN jupyter nbextension install --py pyforest --sys-prefix && \
 
 # the fix permissions scripts don't seem to work properly these files
 USER root
-COPY .pyforest/user_imports.py /home/$NB_USER/.pyforest/user_imports.py
-COPY .ipython/profile_default/startup/pyforest_autoimport.py /home/$NB_USER/.ipython/profile_default/startup/pyforest_autoimport.py
-COPY .ipython/profile_default/startup/bamboolib_autoimport.py /home/$NB_USER/.ipython/profile_default/startup/bamboolib_autoimport.py
+COPY user_imports.py /home/$NB_USER/.pyforest/user_imports.py
+COPY pyforest_autoimport.py /home/$NB_USER/.ipython/profile_default/startup/pyforest_autoimport.py
+COPY bamboolib_autoimport.py /home/$NB_USER/.ipython/profile_default/startup/bamboolib_autoimport.py
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
