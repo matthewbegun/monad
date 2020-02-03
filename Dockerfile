@@ -28,6 +28,7 @@ RUN jupyter nbextension install --py pyforest --sys-prefix && \
 RUN ipython profile create
 USER root
 COPY user_imports.py /home/$NB_USER/.pyforest/user_imports.py
+COPY top-trumps-last-jedi.csv /home/$NB_USER/data/top-trumps-last-jedi.csv
 COPY pyforest_autoimport.py /home/$NB_USER/.ipython/profile_default/startup/pyforest_autoimport.py
 COPY bamboolib_autoimport.py /home/$NB_USER/.ipython/profile_default/startup/bamboolib_autoimport.py
 RUN chown -R ${NB_UID} ${HOME}
