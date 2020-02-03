@@ -6,6 +6,9 @@ data
 *.xlsx
 *.pdf
 
+# don't commit notebooks
+*.ipynb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
