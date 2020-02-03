@@ -1,0 +1,29 @@
+name: testes
+channels:
+  - conda-forge
+  - defaults
+  - conda-forge/label/broken
+dependencies:
+  - python=3.7
+  - pip
+  - jupyterlab
+  - jupyter_contrib_nbextensions
+  - nodejs
+  - jupytext
+  - black
+  - pytest
+  - flake8-bugbear
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - scikit-learn
+  - altair
+  - vega_datasets
+  - seaborn
+  - statsmodels
+  - scikit-learn
+  - lifelines
+  - pip:
+      - pyforest
+      - bamboolib

@@ -2,9 +2,8 @@ FROM jupyter/scipy-notebook:7a0c7325e470
 
 USER root
 
-RUN conda install --quiet --yes -c conda-forge --overide-channel \
+RUN conda install --quiet --yes -c conda-forge \
     lifelines \
-    pyreadstat \
     jupytext \
     jupyter_contrib_nbextensions && \
     jupyter nbextension enable autoscroll/main --sys-prefix && \
