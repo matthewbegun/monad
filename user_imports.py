@@ -4,3 +4,4 @@
 # from pathlib import Path
 # import re
 import lifelines
+import sympy as sym
