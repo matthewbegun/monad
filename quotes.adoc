@@ -1,0 +1,27 @@
+"Always code as if the guy
+who ends up maintaining your code
+will be a violent psychopath
+who knows where you live."
+-- [.line-through]#Martin Golding#, John F. Woods, comp.lang.c++ (1991)
+
+"A person who never made a mistake never tried anything new."
+-- [.line-through]#Albert Einstein#, Anonymous (1832)
+
+[quote, Charles Lutwidge Dodgson, 'Mathematician and author, also known as https://en.wikipedia.org/wiki/Lewis_Carroll[Lewis Carroll]']
+If you don't know where you are going, any road will get you there.
+
+"Everything should be made as simple as possible,
+but not simpler."
+-- [.line-through]#Albert Einstein#, Roger Sessions (1950)
+
+"Swallow a toad in the morning if you want to encounter nothing more disgusting the rest of the day.""
+-- [.line-through]#Mark Twain#, Nicolas Chamfort (1741-1794)
+
+"The highest form of research is essentially play."
+-- [.line-through]#Albert Einstein#, N. V. Scarfe (1962)
+
+"A severe mathematical penalty is incurred when time dependence has to be characterised..."
+-- Donald Mackay, Multimedia Environmental Models: The Fugacity Approach; (Mackay, 2001, p. 10)
+
+"...there is some conceptual difﬁculty about referring to a “partial pressure of DDT in a ﬁsh”..."
+-- Donald Mackay, Multimedia Environmental Models: The Fugacity Approach; (Mackay, 2001, p. 79)
