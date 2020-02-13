@@ -1,4 +1,5 @@
 import seaborn as sns
+import pandas as pd
 # ^^^ pyforest auto-imports - don't write above this line
 # obligatory first code cell
 # import pyforest
@@ -12,7 +13,6 @@ df = pd.read_csv("top-trumps-last-jedi.csv")
 df
 
 
-
 # pair plot
 g = sns.pairplot(df)
 
@@ -22,5 +22,3 @@ g = g.map_lower(sns.kdeplot)
 # g = g.map_diag(sns.kdeplot, lw=2)
 # g = g.map_diag(sns.rugplot, lw=2)
 g = g.map_diag(sns.distplot)
-
-

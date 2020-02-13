@@ -1,0 +1,49 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# shlfmt
+binary_next_line = true   # like -bn
+switch_case_indent = true # like -ci
+space_redirects = true    # like -sr
+keep_padding = true       # like -kp
+simplify = true           # don't think these will work
+simple = true             # don't think these will work
+[*.sh]
+shell_variant = posix # like -ln=posix
+
+[{*.bat,*.cmd}]
+end_of_line = crlf
+
+[*.md]
+trim_trailing_whitespace = false
+
+[{*.yaml,*.yml,*.json}]
+indent_size = 2
+insert_final_newline = ignore
+
+# Minified JavaScript files shouldn't be changed
+[**.min.js]
+indent_style = ignore
+insert_final_newline = ignore
+ignore = true
+
+# ignore properties files for now
+[*.git*]
+ignore = true
+indent_size = 4
+indent_style = tab
+
+# Ignore the entire "third_party" directory.
+[third_party/**]
+ignore = true
+indent_style = ignore
+indent_size = ignore
