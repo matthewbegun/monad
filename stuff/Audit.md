@@ -1,0 +1,19 @@
+﻿# The great digital decluttering (audit)
+
+Digital content
+Storage
+gdrive
+OneDrive
+hdrive
+dropbox
+reading lists
+digital services
+websites
+thought lists
+"open loops"
+processes
+technology
+software
+projects
+libs
+winners v preferences
