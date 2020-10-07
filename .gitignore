@@ -1,0 +1,23 @@
+# don't commit data
+data
+*.csv
+*.sav
+*.xls
+*.xlsx
+*.pdf
+*.ipynb
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# auto saved backups
+*~
+
+# vscode local files
+.vscode
+.history

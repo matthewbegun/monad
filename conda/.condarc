@@ -1,0 +1,10 @@
+channel_priority: strict
+channels:
+  - conda-forge
+  - defaults
+envs_dirs:
+  - ~/.conda/envs
+pkgs_dirs:
+  - ~/.conda/pkgs
+  - C:\Users\z3391967\scoop\apps\miniconda3\current\envs
+changeps1: false
