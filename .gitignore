@@ -21,3 +21,6 @@ __pycache__/
 # vscode local files
 .vscode
 .history
+
+# github codespaces python environment
+pythonenv*
