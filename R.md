@@ -8,7 +8,7 @@
 
 ```pwsh
 $env:R_HOME = "C:\PROGRA~2\R\R-4.5.2\bin"
-& "$env:R_HOME\Rscript.exe" myscript.R
+& "$env:R_HOME\x64\Rscript.exe" myscript.R
 ```
 
 ## advance package management
