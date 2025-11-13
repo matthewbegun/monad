@@ -1,3 +1,4 @@
+```py
 # ipython
 
 # magics
@@ -62,3 +63,4 @@ p = Path("testes")
 # p.absolute()
 for child in p.iterdir(): child
 
+```

@@ -2,13 +2,6 @@
 
 bits to make living on a computer more pleasant than eating rusty nails
 
-## system management
-
-```cmd
-# mount efi partition in admin cmd.exe
-mountvol.exe S: /s
-```
-
 ## online sources of wisdom
 
 - [posh-git on github](https://github.com/dahlbyk/posh-git)
@@ -31,19 +24,3 @@ produces this very cool output
 - OS: Microsoft Windows NT 10.0.18362.0
 ```
 
-## local accumulation of wisdom
-
-- run `code (Get-ChildItem $Home\.vscode\extensions\ms-vscode.PowerShell-*\examples)[-1]` in a terminal to get to the [powershell extension example scripts](https://github.com/PowerShell/vscode-powershell/blob/master/examples/README.md)
-- run `choco list -li > choco-list-li.txt` to create a [list](choco-list-li.txt) of all "packages" installed on local machine
-- run `choco list -li > choco-list-l.txt` to create a [list](choco-list-l.txt) of all "packages" installed by chocolatey on local machine
-- run `scoop export > scoop-list.txt` to create a [list](scoop-list.txt) of installed scoop apps
-
-### mutually beneficial
-
-- writing extensive in source documentation is not mutually beneficial, because it inconveniences present-self and only potentially benefits future-consumer
-- writing automated tests *is* mutually beneficial because it provides confidence for present-self and documentation that is up to date for future-consumer
-- present-self and future-self are both consumers of the conceptual work
-- that means that in xp approach to ced all work must be mutually beneficial for
-    - present-self
-    - future-self
-    - the-dave

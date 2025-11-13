@@ -4,7 +4,7 @@
 
 ### professional networking
 
-- [[researchgate](https://www.researchgate.net/)
+- [researchgate](https://www.researchgate.net/)
 - [github](https://github.com/)
 - [linkedin](https://www.linkedin.com/)
 - [twitter](https://twitter.com/)

@@ -1,5 +1,12 @@
 # batchisms
 
+## system management
+
+```cmd
+# mount efi partition in admin cmd.exe
+mountvol.exe S: /s
+```
+
 ## file permissions and ownership - `icacls`
 
 recursively change owner to `Administrators` group
