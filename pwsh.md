@@ -20,3 +20,26 @@ This will list all installed windows fonts
     [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")
     (New-Object System.Drawing.Text.InstalledFontCollection).Families
     ```
+
+`for each` loops
+: 
+```pwsh
+$packages = @("Typst.Typst","astral-sh.uv","jqlang.jq",...)
+
+# keyword / no pipe
+foreach ($package in $packages) {
+    winstall $package
+}
+
+# OR
+
+# cmdlet / pipe
+$packages | ForEach-Object {winstall $_}
+$packages | % {winstall $_}
+
+# OR
+
+# lists have a ForEach method
+$packages.ForEach( { winstall $_ } )
+$packages = @("Typst.Typst","astral-sh.uv","jqlang.jq",...).ForEach( { winstall $_ } )
+```
