@@ -16,3 +16,9 @@ Header number, timecode, and newline for `vtt` transcripts
 
 Identify sequence like _-nnnnnn_ (hyphen followed by 6 digits) in string
 : `-\d{6}\b`
+
+Identify the 8 digit date in a filenamme like `GMT20251010-030124_Recording.transcript.vtt`
+: `(?<=^GMT)\d{8}(?=-)`
+
+Find and replace on the list of filenames to convert `GMT20251010-030124_Recording.transcript.vtt` to `20251010.md`
+: Find `^GMT(\d{8}).*` and Replace `$1.md`
