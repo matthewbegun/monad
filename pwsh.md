@@ -43,3 +43,20 @@ $packages | % {winstall $_}
 $packages.ForEach( { winstall $_ } )
 $packages = @("Typst.Typst","astral-sh.uv","jqlang.jq",...).ForEach( { winstall $_ } )
 ```
+
+## winget
+
+Since export appears to be fubar'd, try the following:
+
+get a list of all installed packages that are available on winget
+: `winget ls | ugrep -e 'winget$`
+
+get a list of all installed packages that are available on winget / msstore
+: `winget ls | ugrep -e '(mssto…|winget)$'`
+
+now with more saving
+: winget ls | ugrep -e '(mssto…|winget)$' > .\winget_packages.txt
+
+
+
+
